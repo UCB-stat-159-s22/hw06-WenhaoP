@@ -6,13 +6,13 @@
 
 ## Installation
 
-To create the conda environment, run
+To create the conda environment, in the root directory, run
 
 ```
 mamba env create -f environment.yml -p ~/envs/ligo
 ```
 
-Then, to install the `ligotools` package, run
+Then, to install the `ligotools` package, in the root directory, run
 
 ```
 cd ligotools
