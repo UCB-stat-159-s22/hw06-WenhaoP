@@ -15,7 +15,17 @@ mamba env create -f environment.yml -p ~/envs/ligo
 Then, to install the `ligotools` package, run
 
 ```
-cd ligotools
-pip install .
-cd ..
+pip install ligotools/.
+```
+
+To test the installed `ligotools` package, run
+
+```
+pytest ligotools
+```
+
+or equivalently but with more details
+
+```
+pytest -vv ligotools
 ```
