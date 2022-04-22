@@ -8,6 +8,3 @@ dependencies:
   - matplotlib=2.2
   - h5py=2.10
   - pytest
-  - pip
-  - pip:
-    - ligotools/.
