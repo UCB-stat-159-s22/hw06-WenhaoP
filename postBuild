@@ -7,6 +7,6 @@
 # have been loaded (via the environment.yml file), so that when experimenting
 # in the Binder, users can not only see the package, but potentially modify it
 
-conda init
-conda activate ligo
-pip install ligotools/.
+# conda init
+# conda activate ligo
+# pip install ligotools/.
