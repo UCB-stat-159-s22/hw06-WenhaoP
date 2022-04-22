@@ -12,7 +12,9 @@ To create the conda environment, in the root directory, run
 mamba env create -f environment.yml -p ~/envs/ligo
 ```
 
-Then, to install the `ligotools` package, in the root directory, run
+The command above will also install `ligotools` package from local source.
+
+To install the `ligotools` package separately and manually, in the root directory, run
 
 ```
 pip install ligotools/.
@@ -29,3 +31,15 @@ or equivalently but with more details
 ```
 pytest -vv ligotools
 ```
+
+## Jupyter book
+
+We have a jupyter book of this repository. To access the jupyter book on the hub, go into `ligobook/_build/html/` and run
+
+```
+python -m SimpleHTTPServer 8000
+```
+
+in the `ligo` conda environment.
+
+Then, open the [link](https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html).
