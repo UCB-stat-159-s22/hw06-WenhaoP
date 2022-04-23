@@ -45,3 +45,7 @@ to build the notebook. To access the jupyter book on the hub, go into `ligobook/
 python -m SimpleHTTPServer 8000
 ```
 in the `ligo` conda environment again. Then, access the [link](https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html) to read the jupyter book.
+
+## GitHub Pages
+
+The GitHub page of this repo can be visited [here](https://ucb-stat-159-s22.github.io/hw06-WenhaoP/)
