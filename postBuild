@@ -6,7 +6,3 @@
 # In this example, we install our own package in development mode after its dependencies
 # have been loaded (via the environment.yml file), so that when experimenting
 # in the Binder, users can not only see the package, but potentially modify it
-
-conda init bash
-conda activate ligo
-pip install ligotools/.
