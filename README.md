@@ -32,12 +32,16 @@ pytest -vv ligotools
 
 ## Jupyter book
 
-We have a jupyter book of this repository. To access the jupyter book on the hub, go into `ligobook/_build/html/` and run
+We can a jupyter book of this repository. First in the `ligo` conda environment, run
+
+```
+jupyter-book config sphinx .
+sphinx-build  . _build/html -D html_baseurl=${JUPYTERHUB_SERVICE_PREFIX}/proxy/absolute/8000
+```
+
+to build the notebook. To access the jupyter book on the hub, go into `ligobook/_build/html/` and run
 
 ```
 python -m SimpleHTTPServer 8000
 ```
-
-in the `ligo` conda environment.
-
-Then, open the [link](https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html).
+in the `ligo` conda environment again. Then, access the [link](https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html) to read the jupyter book.
