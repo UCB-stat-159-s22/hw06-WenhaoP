@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r book-requirements.txt
-        conda env create -f environment.yml
+
     # Build the book
     - name: Build the book
       run: |
