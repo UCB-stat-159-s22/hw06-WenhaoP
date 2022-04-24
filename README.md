@@ -52,3 +52,14 @@ in the `base` environment. Then, access the [link](https://stat159.datahub.berke
 ## GitHub Pages
 
 The GitHub page of this repo can be visited [here](https://ucb-stat-159-s22.github.io/hw06-WenhaoP/)
+
+## Makefile
+
+There are following makefile commands available:
+
+- `env`: create and configure the environment.
+- `remove-env`: remove the configured environment.
+- `html`: build the JupyterBook normally (calling `jupyterbook build .`). Note this build can only be viewed if the repo is cloned locally, or with the VNC desktop on the hub.
+- `html-hub`: build the JupyterBook so that you can view it on the hub with the URL proxy trick as indicated above.
+- `clean`: clean up the `figures`, `audio`  and `_build` folders.
+- `run-main`: execute the jupyter notebook `main.ipynb`.

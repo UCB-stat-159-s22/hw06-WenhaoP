@@ -17,12 +17,12 @@ def whiten(strain, interp_psd, dt):
     return white_ht
   
 # function to keep the data within integer limits, and write to wavfile:
-def write_wavfile(filename,fs,data):
+def write_wavfile(filename, fs, data):
     d = np.int16(data/np.max(np.abs(data)) * 32767 * 0.9)
     wavfile.write(filename,int(fs), d)
 
 # function that shifts frequency of a band-passed signal
-def reqshift(data,fshift=100,sample_rate=4096):
+def reqshift(data, fshift=100, sample_rate=4096):
     """Frequency shift the signal by constant
     """
     x = np.fft.rfft(data)
@@ -39,9 +39,12 @@ def reqshift(data,fshift=100,sample_rate=4096):
 def plot_changes(
   time, timemax, SNR, pcolor, det, eventname, plottype,
   tevent, strain_whitenbp, template_match, template_fft, datafreq,
-  d_eff, freqs, data_psd, fs
+  d_eff, freqs, data_psd, fs, testing=False
 ):
-
+  
+  if testing:
+    return None
+  
   # -- Plot the result
   plt.figure(figsize=(10,8))
   plt.subplot(2,1,1)
