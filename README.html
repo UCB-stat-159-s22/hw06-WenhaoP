@@ -202,6 +202,11 @@
    GitHub Pages
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#makefile">
+   Makefile
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -235,6 +240,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#github-pages">
    GitHub Pages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#makefile">
+   Makefile
   </a>
  </li>
 </ul>
@@ -287,6 +297,18 @@ sphinx-build  . _build/html -D html_baseurl=${JUPYTERHUB_SERVICE_PREFIX}/proxy/a
 <div class="section" id="github-pages">
 <h2>GitHub Pages<a class="headerlink" href="#github-pages" title="Permalink to this headline">¶</a></h2>
 <p>The GitHub page of this repo can be visited <a class="reference external" href="https://ucb-stat-159-s22.github.io/hw06-WenhaoP/">here</a></p>
+</div>
+<div class="section" id="makefile">
+<h2>Makefile<a class="headerlink" href="#makefile" title="Permalink to this headline">¶</a></h2>
+<p>There are following makefile commands available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">env</span></code>: create and configure the environment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove-env</span></code>: remove the configured environment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code>: build the JupyterBook normally (calling <code class="docutils literal notranslate"><span class="pre">jupyterbook</span> <span class="pre">build</span> <span class="pre">.</span></code>). Note this build can only be viewed if the repo is cloned locally, or with the VNC desktop on the hub.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html-hub</span></code>: build the JupyterBook so that you can view it on the hub with the URL proxy trick as indicated above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clean</span></code>: clean up the <code class="docutils literal notranslate"><span class="pre">figures</span></code>, <code class="docutils literal notranslate"><span class="pre">audio</span></code>  and <code class="docutils literal notranslate"><span class="pre">_build</span></code> folders.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">run-main</span></code>: execute the jupyter notebook <code class="docutils literal notranslate"><span class="pre">main.ipynb</span></code>.</p></li>
+</ul>
 </div>
 </div>
 

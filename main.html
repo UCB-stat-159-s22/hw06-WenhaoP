@@ -1333,17 +1333,89 @@ The LIGO Scientific Collaboration, the Virgo Collaboration, <a class="reference 
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For detector H1, maximum at 1126259462.4395 with SNR = 18.6, D_eff = 814.44, horizon = 1889.6 Mpc
-For detector L1, maximum at 1126259462.4324 with SNR = 13.2, D_eff = 999.74, horizon = 1650.6 Mpc
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;ligotools/ligotools/tests/template_fft.npy&#39;</span><span class="p">,</span> <span class="n">template_fft</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="_images/main_35_1.png" src="_images/main_35_1.png" />
-<img alt="_images/main_35_2.png" src="_images/main_35_2.png" />
-<img alt="_images/main_35_3.png" src="_images/main_35_3.png" />
-<img alt="_images/main_35_4.png" src="_images/main_35_4.png" />
-<img alt="_images/main_35_5.png" src="_images/main_35_5.png" />
-<img alt="_images/main_35_6.png" src="_images/main_35_6.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">template_fft</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.36650601e-23+3.04351626e-23j, -8.34781111e-24-3.65492302e-23j,
+        1.19590339e-23+3.02836654e-23j, ...,
+       -7.16086917e-24-3.40059048e-23j,  1.47291339e-23+3.15869715e-23j,
+       -7.27386111e-24-3.56127209e-23j])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">datafreq</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.     ,  0.03125,  0.0625 , ..., -0.09375, -0.0625 , -0.03125])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">d_eff</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>999.743130306333
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">freqs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.00000e+00, 2.50000e-01, 5.00000e-01, ..., 2.04750e+03,
+       2.04775e+03, 2.04800e+03])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">data_psd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.56383729e-36, 1.81709453e-36, 4.65682719e-38, ...,
+       1.63775259e-50, 1.95132890e-50, 1.23094756e-50])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4096
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="notes-on-these-results">
