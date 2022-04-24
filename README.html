@@ -278,11 +278,11 @@
 sphinx-build  . _build/html -D html_baseurl=${JUPYTERHUB_SERVICE_PREFIX}/proxy/absolute/8000
 </pre></div>
 </div>
-<p>to build the notebook. To access the jupyter book on the hub, go into <code class="docutils literal notranslate"><span class="pre">ligobook/_build/html/</span></code> and run</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">SimpleHTTPServer</span> <span class="mi">8000</span>
+<p>to build the notebook. To access the jupyter book on the hub, go into <code class="docutils literal notranslate"><span class="pre">_build/html/</span></code> and run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span>
 </pre></div>
 </div>
-<p>in the <code class="docutils literal notranslate"><span class="pre">ligo</span></code> conda environment again. Then, access the <a class="reference external" href="https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html">link</a> to read the jupyter book.</p>
+<p>in the <code class="docutils literal notranslate"><span class="pre">base</span></code> environment. Then, access the <a class="reference external" href="https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html">link</a> to read the jupyter book.</p>
 </div>
 <div class="section" id="github-pages">
 <h2>GitHub Pages<a class="headerlink" href="#github-pages" title="Permalink to this headline">¶</a></h2>

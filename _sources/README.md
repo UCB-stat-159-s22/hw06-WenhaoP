@@ -42,12 +42,12 @@ jupyter-book config sphinx .
 sphinx-build  . _build/html -D html_baseurl=${JUPYTERHUB_SERVICE_PREFIX}/proxy/absolute/8000
 ```
 
-to build the notebook. To access the jupyter book on the hub, go into `ligobook/_build/html/` and run
+to build the notebook. To access the jupyter book on the hub, go into `_build/html/` and run
 
 ```
-python -m SimpleHTTPServer 8000
+python -m http.server
 ```
-in the `ligo` conda environment again. Then, access the [link](https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html) to read the jupyter book.
+in the `base` environment. Then, access the [link](https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html) to read the jupyter book.
 
 ## GitHub Pages
 
