@@ -6,13 +6,16 @@
 
 ## Installation
 
-To create the conda environment, in the root directory, run
+To create and activate the conda environment, in the root directory, run
 
 ```
 mamba env create -f environment.yml -p ~/envs/ligo
+conda activate ligo
 ```
 
-The command above will automatically install the `ligotools` local package. To separately install the `ligotools` package, in the root directory, run
+The command above will automatically install the `ligotools` local package in the same environment. 
+
+To separately install the `ligotools` package, in the root directory, run
 
 ```
 pip install ligotools/.
@@ -39,12 +42,12 @@ jupyter-book config sphinx .
 sphinx-build  . _build/html -D html_baseurl=${JUPYTERHUB_SERVICE_PREFIX}/proxy/absolute/8000
 ```
 
-to build the notebook. To access the jupyter book on the hub, go into `ligobook/_build/html/` and run
+to build the notebook. To access the jupyter book on the hub, go into `_build/html/` and run
 
 ```
-python -m SimpleHTTPServer 8000
+python -m http.server
 ```
-in the `ligo` conda environment again. Then, access the [link](https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html) to read the jupyter book.
+in the `base` environment. Then, access the [link](https://stat159.datahub.berkeley.edu/user-redirect/proxy/8000/index.html) to read the jupyter book.
 
 ## GitHub Pages
 
