@@ -43,7 +43,7 @@ def plot_changes(
 ):
   
   if testing:
-    return None
+    return True
   
   # -- Plot the result
   plt.figure(figsize=(10,8))

@@ -43,8 +43,9 @@ def test_plot_changes():
   freqs = np.load(tests_path + 'freqs.npy')
   data_psd = np.load(tests_path + 'data_psd.npy')
   
-  plot_changes(time, 1126259462.432373, SNR, 'g', 'L1', eventname, 'png', 1126259462.44,
+  out = plot_changes(time, 1126259462.432373, SNR, 'g', 'L1', eventname, 'png', 1126259462.44,
                      strain_whitenbp, template_match, template_fft, datafreq,
                      999.743130306333, freqs, data_psd, 4096, testing=True)
+  assert out
 
   
