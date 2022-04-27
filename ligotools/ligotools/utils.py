@@ -39,11 +39,8 @@ def reqshift(data, fshift=100, sample_rate=4096):
 def plot_changes(
   time, timemax, SNR, pcolor, det, eventname, plottype,
   tevent, strain_whitenbp, template_match, template_fft, datafreq,
-  d_eff, freqs, data_psd, fs, testing=False
+  d_eff, freqs, data_psd, fs
 ):
-  
-  if testing:
-    return True
   
   # -- Plot the result
   plt.figure(figsize=(10,8))

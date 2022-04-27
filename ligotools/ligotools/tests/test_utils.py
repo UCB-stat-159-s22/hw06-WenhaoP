@@ -1,7 +1,10 @@
+import matplotlib
+matplotlib.use('Agg')
 from ligotools.utils import *
 from ligotools import readligo as rl
 from scipy.interpolate import interp1d
 import matplotlib.mlab as mlab
+from os.path import exists
 
 eventname = 'GW150914' 
 tests_path = "ligotools/ligotools/tests/"
@@ -23,6 +26,7 @@ def test_write_wavefile():
   strain_H1_whitenbp = np.load(tests_path + 'strain_H1_whitenbp.npy')
   indxd_0 = np.load(tests_path + 'indxd_0.npy')
   write_wavfile(tests_path + eventname+ "_H1_whitenbp.wav", int(fs), strain_H1_whitenbp[(indxd_0, )])
+  assert exists(tests_path + eventname+ "_H1_whitenbp.wav")
 
 def test_reqshift():
   fs = 4096
@@ -30,7 +34,7 @@ def test_reqshift():
   strain_H1_whitenbp = np.load(tests_path + 'strain_H1_whitenbp.npy')
   strain_H1_shifted = np.load(tests_path + 'strain_H1_shifted.npy')
   out = reqshift(strain_H1_whitenbp,fshift=fshift,sample_rate=fs)
-  return np.array_equal(out, strain_H1_shifted)
+  assert np.array_equal(out, strain_H1_shifted)
   
 def test_plot_changes():
   time = np.load(tests_path + 'time.npy')
@@ -43,9 +47,11 @@ def test_plot_changes():
   freqs = np.load(tests_path + 'freqs.npy')
   data_psd = np.load(tests_path + 'data_psd.npy')
   
-  out = plot_changes(time, 1126259462.432373, SNR, 'g', 'L1', eventname, 'png', 1126259462.44,
+  plot_changes(time, 1126259462.432373, SNR, 'g', 'L1', eventname, 'png', 1126259462.44,
                      strain_whitenbp, template_match, template_fft, datafreq,
-                     999.743130306333, freqs, data_psd, 4096, testing=True)
-  assert out
+                     999.743130306333, freqs, data_psd, 4096)
+  assert exists('figures/' + eventname + '_L1_matchfreq.png')
+  assert exists('figures/' + eventname + '_L1_matchtime.png')
+  assert exists('figures/' + eventname + '_L1_SNR.png')
 
   
