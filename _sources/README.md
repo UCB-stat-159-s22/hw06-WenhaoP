@@ -33,6 +33,8 @@ or equivalently but with more details
 pytest -vv ligotools
 ```
 
+in the root directory. 
+
 ## Jupyter book
 
 We can a jupyter book of this repository. First in the `ligo` conda environment, run
